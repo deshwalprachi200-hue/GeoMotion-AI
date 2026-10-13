@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+.streamlit/
+data/processed/
+results/*.png
+results/*.html
+*.log
+.DS_Store
+Thumbs.db

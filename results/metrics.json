@@ -1,0 +1,58 @@
+{
+  "sample_mode": true,
+  "trajectories_evaluated": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "parameters": {
+    "search_radius": 1.0,
+    "max_candidates": 8,
+    "gps_sigma": 0.25,
+    "transition_beta": 2.0,
+    "route_distance_cutoff_factor": 8.0,
+    "unmatched_penalty": 1000000000.0
+  },
+  "nearest_road": {
+    "n_trajectories": 5,
+    "mean_of_mean_match_distance": 0.006407159523606175,
+    "mean_edge_precision": 0.6114930820813174,
+    "mean_edge_recall": 0.0763576194885656,
+    "mean_edge_f1": 0.13238576802787355,
+    "mean_runtime_sec": 0.0806326400488615,
+    "total_unmatched": 0
+  },
+  "hmm_viterbi": {
+    "n_trajectories": 5,
+    "mean_of_mean_match_distance": 0.019271304219667378,
+    "mean_edge_precision": 0.36933155080213903,
+    "mean_edge_recall": 0.05931008863026084,
+    "mean_edge_f1": 0.1005504602170358,
+    "mean_runtime_sec": 8.399650559946895,
+    "total_unmatched": 0
+  },
+  "failed_or_excluded": [],
+  "supervised_learning": {
+    "supervised_training_performed": false,
+    "primary_advanced_method": "hmm_viterbi",
+    "n_sparse_points": 301,
+    "n_reference_routes": 23,
+    "reasons": [
+      "Reference files contain one node sequence per trajectory, not a label per GPS point.",
+      "Sparse observations (311 points) do not align 1:1 with dense/reference vertices.",
+      "Randomly splitting points from the same trip would leak trajectory identity.",
+      "Identifiers match vertexMap node IDs; they are a path, not candidate-class labels."
+    ],
+    "if_labels_become_available": [
+      "Split by trajectory order_index, never by shuffling adjacent points.",
+      "Keep reference path out of feature columns.",
+      "Report candidate-ranking metrics separately from HMM sequence metrics."
+    ]
+  },
+  "metric_definitions": {
+    "mean_match_distance": "Euclidean GPS-to-matched-road distance in native projected units (not metres unless 1 unit happens to be 1 m).",
+    "edge_precision_recall": "Set overlap between predicted observation edges and reference path edges. Not a point-accuracy score."
+  }
+}

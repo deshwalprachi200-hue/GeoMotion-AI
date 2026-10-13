@@ -1,0 +1,440 @@
+{
+  "source": "SparseTaxi selected files copied into data/raw (originals not modified)",
+  "files": {
+    "raw_dir": "data/raw",
+    "processed_dir": "data/processed",
+    "sparse_coor": "data/raw/sparse_trajectories/heavyTraj_sparse.coor.txt",
+    "dense_coor": "data/raw/manual_matched/beijing_sparse.coor.txt",
+    "reference": "data/raw/manual_matched/beijing_sparse.txt",
+    "vertex_map": "data/raw/map/vertexMap.txt",
+    "adjacent_list": "data/raw/map/adjacentList.txt",
+    "osm_data": "data/raw/map/beijing.osm_data.txt",
+    "highway": "data/raw/map/beijing.highway.txt",
+    "waynodes": "data/raw/map/beijing.waynodes.txt",
+    "map_readme": "data/raw/map/README.md"
+  },
+  "coordinate_system": {
+    "kind": "projected_unknown",
+    "gps_field_order": [
+      "timestamp",
+      "x",
+      "y"
+    ],
+    "x_name": "x",
+    "y_name": "y",
+    "distance_unit": "native_coordinate_units",
+    "notes": "Map README states vertex x,y are a projected space based on lon/lat. GPS extents overlap the vertex extents, so matching uses Euclidean distance in this shared space. Folium OSM tiles are geographically misleading.\n"
+  },
+  "sparse": {
+    "declared": 23,
+    "parsed": 23,
+    "points": 311,
+    "file_trajectory_ids": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "extent": {
+      "min_x": 16.902556,
+      "max_x": 47.618118,
+      "min_y": 94.962402,
+      "max_y": 128.436192,
+      "n": 311
+    }
+  },
+  "dense": {
+    "declared": 23,
+    "parsed": 23,
+    "points": 2314,
+    "short_trajectories": [
+      {
+        "order_index": 2,
+        "file_trajectory_id": 2,
+        "declared": 119,
+        "actual": 118
+      },
+      {
+        "order_index": 12,
+        "file_trajectory_id": 12,
+        "declared": 65,
+        "actual": 64
+      },
+      {
+        "order_index": 16,
+        "file_trajectory_id": 16,
+        "declared": 90,
+        "actual": 87
+      }
+    ],
+    "extent": {
+      "min_x": 16.8189,
+      "max_x": 47.9737,
+      "min_y": 94.9275,
+      "max_y": 128.335,
+      "n": 2314
+    }
+  },
+  "references": {
+    "n_routes": 23,
+    "identifier_semantics": {
+      "upstream_readme_claim": "edge_id references adjacentList.txt",
+      "adjacentList_has_explicit_edge_ids": false,
+      "all_reference_ids_exist_in_vertexMap": true,
+      "max_reference_id": 32486,
+      "n_vertices": 32552,
+      "interpretation_used": "node IDs in vertexMap.txt",
+      "justification": "Every reference identifier exists in vertexMap. Consecutive pairs form directed (or reverse) edges in adjacentList except two single-pair gaps. adjacentList has no edge-id column."
+    },
+    "per_route": [
+      {
+        "order_index": 0,
+        "n_ids": 78,
+        "unknown_node_ids": 0,
+        "connected_edges": 77,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 1,
+        "n_ids": 108,
+        "unknown_node_ids": 0,
+        "connected_edges": 107,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 2,
+        "n_ids": 72,
+        "unknown_node_ids": 0,
+        "connected_edges": 70,
+        "disconnected_pairs": 1,
+        "notes": [
+          "used reverse edge (15483,4693) for consecutive nodes (4693,15483)",
+          "1 consecutive node pairs are not connected by an edge"
+        ]
+      },
+      {
+        "order_index": 3,
+        "n_ids": 51,
+        "unknown_node_ids": 0,
+        "connected_edges": 50,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 4,
+        "n_ids": 90,
+        "unknown_node_ids": 0,
+        "connected_edges": 89,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 5,
+        "n_ids": 66,
+        "unknown_node_ids": 0,
+        "connected_edges": 65,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 6,
+        "n_ids": 83,
+        "unknown_node_ids": 0,
+        "connected_edges": 82,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 7,
+        "n_ids": 69,
+        "unknown_node_ids": 0,
+        "connected_edges": 68,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 8,
+        "n_ids": 35,
+        "unknown_node_ids": 0,
+        "connected_edges": 34,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 9,
+        "n_ids": 26,
+        "unknown_node_ids": 0,
+        "connected_edges": 25,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 10,
+        "n_ids": 79,
+        "unknown_node_ids": 0,
+        "connected_edges": 78,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 11,
+        "n_ids": 33,
+        "unknown_node_ids": 0,
+        "connected_edges": 32,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 12,
+        "n_ids": 29,
+        "unknown_node_ids": 0,
+        "connected_edges": 28,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 13,
+        "n_ids": 56,
+        "unknown_node_ids": 0,
+        "connected_edges": 55,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 14,
+        "n_ids": 29,
+        "unknown_node_ids": 0,
+        "connected_edges": 28,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 15,
+        "n_ids": 75,
+        "unknown_node_ids": 0,
+        "connected_edges": 74,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 16,
+        "n_ids": 37,
+        "unknown_node_ids": 0,
+        "connected_edges": 36,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 17,
+        "n_ids": 57,
+        "unknown_node_ids": 0,
+        "connected_edges": 56,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 18,
+        "n_ids": 79,
+        "unknown_node_ids": 0,
+        "connected_edges": 78,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 19,
+        "n_ids": 44,
+        "unknown_node_ids": 0,
+        "connected_edges": 43,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 20,
+        "n_ids": 24,
+        "unknown_node_ids": 0,
+        "connected_edges": 23,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 21,
+        "n_ids": 39,
+        "unknown_node_ids": 0,
+        "connected_edges": 38,
+        "disconnected_pairs": 0,
+        "notes": []
+      },
+      {
+        "order_index": 22,
+        "n_ids": 65,
+        "unknown_node_ids": 0,
+        "connected_edges": 63,
+        "disconnected_pairs": 1,
+        "notes": [
+          "1 consecutive node pairs are not connected by an edge"
+        ]
+      }
+    ]
+  },
+  "road_network": {
+    "vertex_file": "C:\\Users\\Prachi\\GeoMotionAI\\data\\raw\\map\\vertexMap.txt",
+    "adjacency_file": "C:\\Users\\Prachi\\GeoMotionAI\\data\\raw\\map\\adjacentList.txt",
+    "n_nodes": 32552,
+    "n_edges": 68540,
+    "declared_first_line_adjacentList": 32552,
+    "declared_vs_actual_note": "adjacentList.txt first line equals the vertex count (32552), not the number of adjacency rows. Actual directed edges are the data rows.",
+    "skipped_missing_node": 0,
+    "duplicate_directed_pairs_ignored": 1770,
+    "weakly_connected_components": 1839,
+    "strongly_connected_components": 2117,
+    "geometry_source": "straight LineString from vertex coordinates of src/dst",
+    "crs": {
+      "kind": "projected_unknown",
+      "gps_field_order": [
+        "timestamp",
+        "x",
+        "y"
+      ],
+      "x_name": "x",
+      "y_name": "y",
+      "distance_unit": "native_coordinate_units",
+      "notes": "Map README states vertex x,y are a projected space based on lon/lat. GPS extents overlap the vertex extents, so matching uses Euclidean distance in this shared space. Folium OSM tiles are geographically misleading.\n"
+    },
+    "osm_join": {
+      "osm_ways_read": 27542,
+      "edge_attribute_assignments": 68492
+    }
+  },
+  "network_extent": {
+    "min_x": 12.621,
+    "max_x": 52.2739,
+    "min_y": 94.0873,
+    "max_y": 130.862
+  },
+  "gps_overlaps_network": true,
+  "alignment_key": "order_index (0..22)",
+  "supervised_learning": {
+    "supervised_training_performed": false,
+    "primary_advanced_method": "hmm_viterbi",
+    "n_sparse_points": 311,
+    "n_reference_routes": 23,
+    "reasons": [
+      "Reference files contain one node sequence per trajectory, not a label per GPS point.",
+      "Sparse observations (311 points) do not align 1:1 with dense/reference vertices.",
+      "Randomly splitting points from the same trip would leak trajectory identity.",
+      "Identifiers match vertexMap node IDs; they are a path, not candidate-class labels."
+    ],
+    "if_labels_become_available": [
+      "Split by trajectory order_index, never by shuffling adjacent points.",
+      "Keep reference path out of feature columns.",
+      "Report candidate-ranking metrics separately from HMM sequence metrics."
+    ]
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "short_dense_trajectory",
+      "order_index": 2,
+      "file_trajectory_id": 2,
+      "declared": 119,
+      "actual": 118
+    },
+    {
+      "severity": "warning",
+      "code": "parse",
+      "order_index": 2,
+      "detail": "declared 119 points but found 118 before next header"
+    },
+    {
+      "severity": "warning",
+      "code": "short_dense_trajectory",
+      "order_index": 12,
+      "file_trajectory_id": 12,
+      "declared": 65,
+      "actual": 64
+    },
+    {
+      "severity": "warning",
+      "code": "parse",
+      "order_index": 12,
+      "detail": "declared 65 points but found 64 before next header"
+    },
+    {
+      "severity": "warning",
+      "code": "short_dense_trajectory",
+      "order_index": 16,
+      "file_trajectory_id": 16,
+      "declared": 90,
+      "actual": 87
+    },
+    {
+      "severity": "warning",
+      "code": "parse",
+      "order_index": 16,
+      "detail": "declared 90 points but found 87 before next header"
+    },
+    {
+      "severity": "info",
+      "code": "placeholder_trajectory_ids",
+      "detail": "sparse file_trajectory_id values are not unique; align sparse/dense/reference rows by order_index, not by IDs",
+      "ids": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    },
+    {
+      "severity": "warning",
+      "code": "reference_disconnected_pair",
+      "order_index": 2,
+      "disconnected_pairs": 1
+    },
+    {
+      "severity": "warning",
+      "code": "reference_disconnected_pair",
+      "order_index": 22,
+      "disconnected_pairs": 1
+    }
+  ]
+}

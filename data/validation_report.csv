@@ -1,0 +1,10 @@
+severity,code,order_index,detail
+warning,short_dense_trajectory,2,"{'severity': 'warning', 'code': 'short_dense_trajectory', 'order_index': 2, 'file_trajectory_id': 2, 'declared': 119, 'actual': 118}"
+warning,parse,2,declared 119 points but found 118 before next header
+warning,short_dense_trajectory,12,"{'severity': 'warning', 'code': 'short_dense_trajectory', 'order_index': 12, 'file_trajectory_id': 12, 'declared': 65, 'actual': 64}"
+warning,parse,12,declared 65 points but found 64 before next header
+warning,short_dense_trajectory,16,"{'severity': 'warning', 'code': 'short_dense_trajectory', 'order_index': 16, 'file_trajectory_id': 16, 'declared': 90, 'actual': 87}"
+warning,parse,16,declared 90 points but found 87 before next header
+info,placeholder_trajectory_ids,,"sparse file_trajectory_id values are not unique; align sparse/dense/reference rows by order_index, not by IDs"
+warning,reference_disconnected_pair,2,"{'severity': 'warning', 'code': 'reference_disconnected_pair', 'order_index': 2, 'disconnected_pairs': 1}"
+warning,reference_disconnected_pair,22,"{'severity': 'warning', 'code': 'reference_disconnected_pair', 'order_index': 22, 'disconnected_pairs': 1}"

@@ -1,0 +1,45 @@
+data:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  sparse_coor: data/raw/sparse_trajectories/heavyTraj_sparse.coor.txt
+  dense_coor: data/raw/manual_matched/beijing_sparse.coor.txt
+  reference: data/raw/manual_matched/beijing_sparse.txt
+  vertex_map: data/raw/map/vertexMap.txt
+  adjacent_list: data/raw/map/adjacentList.txt
+  osm_data: data/raw/map/beijing.osm_data.txt
+  highway: data/raw/map/beijing.highway.txt
+  waynodes: data/raw/map/beijing.waynodes.txt
+  map_readme: data/raw/map/README.md
+
+coordinate_system:
+  # Established from file inspection: GPS, vertices and OSM polylines share one
+  # projected (non-WGS84) coordinate space. Do not treat values as lat/lon.
+  kind: projected_unknown
+  gps_field_order: [timestamp, x, y]
+  x_name: x
+  y_name: y
+  distance_unit: native_coordinate_units
+  notes: >
+    Map README states vertex x,y are a projected space based on lon/lat.
+    GPS extents overlap the vertex extents, so matching uses Euclidean distance
+    in this shared space. Folium OSM tiles are geographically misleading.
+
+preprocessing:
+  drop_duplicates: true
+  duplicate_xy_decimals: 6
+  sort_by_timestamp: true
+  jump_threshold: 8.0
+  treat_timestamps_as_placeholders: true
+
+matching:
+  search_radius: 1.0
+  max_candidates: 8
+  gps_sigma: 0.25
+  transition_beta: 2.0
+  route_distance_cutoff_factor: 8.0
+  unmatched_penalty: 1.0e9
+
+demo:
+  sample_mode: true
+  sample_trajectory_count: 5
+  random_seed: 42
